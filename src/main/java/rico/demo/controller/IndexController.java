@@ -1,5 +1,7 @@
 package rico.demo.controller;
 
+import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,9 +15,10 @@ import java.util.List;
 
 
 @Controller
+@Slf4j
 public class IndexController {
 
-    private static final Logger log = LoggerFactory.getLogger(IndexController.class);
+
 
     @Autowired
     private StudentService studentService;
@@ -29,6 +32,7 @@ public class IndexController {
             }
         }
         modelMap.put("studentList", studentList);
+        log.info("+++");
         return "index";
     }
 }
