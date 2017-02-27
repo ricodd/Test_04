@@ -10,6 +10,8 @@ public class Student implements Serializable {
     private Long id;
     private String name;
     private int age;
+    private String email;
+
 
     public Long getId() {
         return id;
